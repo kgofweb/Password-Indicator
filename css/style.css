@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #f2f2f2;
+}
+
+.password {
+  width: 420px;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.password .header {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.password form {
+  position: relative;
+  margin: 20px 5px 10px 5px;
+}
+.password form .field {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 45px;
+}
+.password form .field input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid lightgrey;
+  padding-left: 15px;
+  outline: none;
+  background: none;
+  border-radius: 5px;
+  font-size: 17px;
+  transition: all 0.3s;
+}
+.password form .field input:focus {
+  border-color: #27ae60;
+  box-shadow: inset 0 0 3px #2fd072;
+}
+.password form .field .showBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+.password form .indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10px;
+  margin: 10px 0;
+  display: none;
+}
+.password form .indicator span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: lightgrey;
+  border-radius: 5px;
+}
+.password form .indicator span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.password form .indicator .active.weak::before {
+  background-color: #ff4757;
+}
+.password form .indicator .active.medium::before {
+  background-color: #f9ca24;
+}
+.password form .indicator .active.strong::before {
+  background-color: #23ad5c;
+}
+.password form .indicator :nth-child(2) {
+  margin: 0 5px;
+}
+.password form .text {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  display: none;
+}
+.password form .text.weak {
+  color: #ff4757;
+}
+.password form .text.medium {
+  color: #f9ca24;
+}
+.password form .text.strong {
+  color: #23ad5c;
+}
+
+/*# sourceMappingURL=style.css.map */
